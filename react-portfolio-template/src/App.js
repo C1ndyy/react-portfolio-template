@@ -8,6 +8,7 @@ import React from "react"
 class App extends React.Component{
   state= {
     views: 0,
+    likes: 0,
   };
 
   render(){
