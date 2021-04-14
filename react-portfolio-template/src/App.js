@@ -3,16 +3,23 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Project from "./components/Projects";
 import Contact from "./components/Contact";
+import React from "react"
 
-function App() {
-  return (
-    <div className="App">
-      < Navbar />
-      < About />
-      < Project />
-      < Contact />
-    </div>
-  );
+class App extends React.Component{
+  state= {
+    views: 0,
+  };
+
+  render(){
+    return (
+      <div className="App">
+        < Navbar />
+        < About views={this.state.views}/>
+        < Project />
+        < Contact />
+      </div>
+    );
+  }
 }
 
 export default App
